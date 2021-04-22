@@ -36,7 +36,21 @@ namespace Tokenizer
 
         public List<Token> all()
         {
-            return null;
+            Token token = this.tokenize();
+
+            if (token == null)
+                return null;
+
+            List<Token> tokens = new();
+            
+
+            while(token != null)
+            {
+                tokens.Add(token);
+                token = this.tokenize();
+            }
+            
+            return tokens;
         }
     }
 }
