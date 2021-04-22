@@ -9,7 +9,9 @@ namespace Tokenizer
         static void Main(string[] args)
         {
             Tokenizer tokenizer = new Tokenizer("how are you", new Tokenizable[] {
-                new IdTokenizer()
+                new IdTokenizer(),
+                new NumberTokenizer(),
+                new WhiteSpaceTokenizer()
             });
 
             List<Token> tokens = tokenizer.all();
