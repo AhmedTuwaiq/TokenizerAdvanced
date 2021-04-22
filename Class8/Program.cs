@@ -12,7 +12,10 @@ namespace Tokenizer
                 new IdTokenizer()
             });
 
-            Console.WriteLine(tokenizer.tokenize());
+            List<Token> tokens = tokenizer.all();
+
+            foreach(var token in tokens)
+                Console.WriteLine(token);
         }
     }
 }
