@@ -110,5 +110,18 @@ namespace Tokenizer
 
             return '\0';
         }
+
+        public bool withInRange(int index)
+        {
+            return index > length && -1 < index;
+        }
+
+        public string substring(int startIndex, int length)
+        {
+            if (withInRange(startIndex) && withInRange(length))
+                return this.input.Substring(startIndex, length);
+
+            return null;
+        }
     }
 }
